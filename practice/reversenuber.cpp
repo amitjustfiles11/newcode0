@@ -1,22 +1,23 @@
 #include <iostream>
 using namespace std;
 
-int dig(int n) {
-    int sum = 0;
+int reverseNumber(int n) {
+    int rev = 0;
 
     while (n > 0) {
-        sum = sum + (n % 10);
+        int dig = n % 10;
+        rev = rev * 10 + dig;
         n = n / 10;
     }
 
-    return sum;
+    return rev;
 }
 
 int main() {
     int n;
     cin >> n;
 
-    cout << dig(n);
+    cout << reverseNumber(n);
 
     return 0;
 }
